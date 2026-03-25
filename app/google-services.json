@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "693523492457",
+    "project_id": "olfit-41a42",
+    "storage_bucket": "olfit-41a42.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693523492457:android:4772a275cab4b7df203cf8",
+        "android_client_info": {
+          "package_name": "com.example.olfit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATo-4pP5G0SM3UoUWne0lARtB-N6DHhHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

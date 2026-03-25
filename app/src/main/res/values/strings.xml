@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">OLFIT</string>
+    <string name="need_help">Need Help?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="fill_details_sign_in">Fill the details to sign in account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_account">Don\'t have an account? </string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_dot">Sign Up.</string>
+    <string name="create_account">Create Account</string>
+    <string name="fill_details_sign_up">Fill the details to create account</string>
+    <string name="name">Name</string>
+    <string name="full_name">Full Name</string>
+    <string name="already_have_account">Already have an account? </string>
+    <string name="sign_in_dot">Sign In.</string>
+</resources>
