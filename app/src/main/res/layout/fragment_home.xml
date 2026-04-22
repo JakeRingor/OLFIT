@@ -13,6 +13,17 @@
         android:padding="20dp">
 
         <!-- Header -->
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="58dp"
+            android:layout_height="71dp"
+            android:src="@drawable/olfit"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle"
+            app:layout_constraintVertical_bias="0.393"
+            app:tint="@color/black" />
+
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
@@ -24,18 +35,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/ivProfile"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/ic_launcher_foreground"
-            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvTitle"
-            app:layout_constraintVertical_bias="1.0"
-            app:tint="@color/black" />
-
         <!-- Date Selector -->
+
         <LinearLayout
             android:id="@+id/dateSelector"
             android:layout_width="wrap_content"
