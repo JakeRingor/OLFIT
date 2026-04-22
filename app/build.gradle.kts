@@ -47,6 +47,7 @@ dependencies {
     implementation(platform(libs.supabase.bom))
     implementation(libs.supabase.postgrest)
     implementation(libs.supabase.auth)
+    implementation(libs.supabase.compose.auth) // This handles Android session persistence better
     implementation(libs.ktor.client.android)
 
     testImplementation(libs.junit)

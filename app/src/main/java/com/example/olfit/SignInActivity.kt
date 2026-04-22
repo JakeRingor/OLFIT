@@ -12,23 +12,28 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import io.github.jan.supabase.createSupabaseClient
-import io.github.jan.supabase.auth.Auth
 import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.auth.providers.builtin.Email
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SignInActivity : AppCompatActivity() {
 
-    private val supabaseUrl = "https://gelbjpuqwagtzmrbcsyo.supabase.co"
-    private val supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdlbGJqcHVxd2FndHptcmJjc3lvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3NDc2ODcsImV4cCI6MjA5MjMyMzY4N30.RJ73dVqFAeoU5nrJSIFg6BTAR9rI3O5FKzWfnAS2sYE"
-
-    private val supabaseClient = createSupabaseClient(supabaseUrl, supabaseKey) {
-        install(Auth)
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Wait for session restoration
+        lifecycleScope.launch {
+            // Give Supabase a small amount of time to load the session from storage
+            delay(100) 
+            val currentSession = Supabase.client.auth.currentSessionOrNull()
+            if (currentSession != null) {
+                val intent = Intent(this@SignInActivity, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_sign_in)
 
@@ -49,17 +54,19 @@ class SignInActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 lifecycleScope.launch {
                     try {
-                        supabaseClient.auth.signInWith(Email) {
+                        Supabase.client.auth.signInWith(Email) {
                             this.email = email
                             this.password = password
                         }
+                        
                         Toast.makeText(this@SignInActivity, "Login Successful", Toast.LENGTH_SHORT).show()
-                        // Navigate to Home/MainActivity here
-                        // val intent = Intent(this@SignInActivity, MainActivity::class.java)
-                        // startActivity(intent)
-                        // finish()
+                        
+                        val intent = Intent(this@SignInActivity, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
                     } catch (e: Exception) {
                         Toast.makeText(this@SignInActivity, "Wrong Credentials.", Toast.LENGTH_SHORT).show()
+                        e.printStackTrace()
                     }
                 }
             } else {
