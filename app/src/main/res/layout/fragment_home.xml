@@ -271,7 +271,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/breakfast" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -327,7 +327,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/lunch" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -409,7 +409,7 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/dinner" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -421,14 +421,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pol Roti"
+                        android:text="Chicken Roast"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="piece (1)"
+                        android:text="whole piece (1)"
                         android:textColor="@color/text_secondary"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -469,8 +469,8 @@
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:src="@drawable/ic_launcher_foreground"
-                    app:tint="@color/black" />
+                    android:src="@drawable/mealseaten"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -482,15 +482,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Meals eaten"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="14sp" />
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        />
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="breakfast, Lunch, Dinner"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="12sp" />
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        />
                 </LinearLayout>
             </LinearLayout>
 
@@ -504,8 +509,8 @@
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:src="@drawable/ic_launcher_foreground"
-                    app:tint="@color/black" />
+                    android:src="@drawable/calories"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -517,8 +522,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Remaining Calories"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="14sp" />
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"

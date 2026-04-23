@@ -70,7 +70,7 @@
             <!-- Weight Card -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_meal_card"
@@ -80,10 +80,9 @@
                 android:padding="12dp">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_launcher_foreground"
-                    app:tint="#7A7A7A" />
+                    android:layout_width="53dp"
+                    android:layout_height="51dp"
+                    android:src="@drawable/weight" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -115,10 +114,9 @@
                 android:padding="12dp">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_launcher_foreground"
-                    app:tint="#7A7A7A" />
+                    android:layout_width="53dp"
+                    android:layout_height="51dp"
+                    android:src="@drawable/height" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -140,7 +138,7 @@
             <!-- Workouts Card -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@drawable/bg_meal_card"
                 android:elevation="2dp"
@@ -149,16 +147,16 @@
                 android:padding="12dp">
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_launcher_foreground"
-                    app:tint="#7A7A7A" />
+                    android:layout_width="53dp"
+                    android:layout_height="51dp"
+                    android:src="@drawable/foodeaten"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Workouts Done"
+                    android:text="Food Done"
                     android:textColor="#7A7A7A"
                     android:textSize="10sp" />
 
