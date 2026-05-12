@@ -2,10 +2,25 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="orange">#FF7F50</color>
     <color name="gray">#FF808080</color>
-    <color name="red">#FFFF0000</color>
-    <color name="green">#FF00FF00</color>
-    <color name="blue">#FF0000FF</color>
-    <color name="yellow">#FFFFFF00</color>
+    <color name="orange">#FF7F50</color>
+    <color name="text_primary">#1B3A26</color>
+    <color name="text_secondary">#7A7A7A</color>
+    <color name="text_hint">#BDBDBD</color>
+
+    <color name="calorie_progress">#2ABB8C</color>
+    <color name="calorie_track">#E0F2F1</color>
+
+    <color name="carbs_bg">#FFEBD8</color>
+    <color name="carbs_progress">#FF8F44</color>
+
+    <color name="fat_bg">#E1F1FF</color>
+    <color name="fat_progress">#45A2FF</color>
+
+    <color name="protein_bg">#D7F4E7</color>
+    <color name="protein_progress">#48C48E</color>
+
+    <color name="card_bg">#FFFFFF</color>
+    <color name="card_stroke">#F0F0F0</color>
+    <color name="divider">#E0E0E0</color>
 </resources>
