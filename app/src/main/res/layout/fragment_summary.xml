@@ -29,6 +29,9 @@
             android:layout_width="59dp"
             android:layout_height="61dp"
             android:src="@drawable/olfit"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
             app:layout_constraintBottom_toBottomOf="@+id/tvSummaryHeader"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tvSummaryHeader"
@@ -55,39 +58,17 @@
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/mealseaten"
-                    />
+                    android:src="@drawable/mealseaten" />
 
                 <TextView
+                    android:id="@+id/tvSummaryBreakfast"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:text="Breakfast - Egg, Hotdogs = Calories - 204 | F - 15.9G | C - 2.8G | P - 11.7G"
+                    android:text="Breakfast - None"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="normal" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/calories" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:text="1700 Calories Left"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View
@@ -107,38 +88,17 @@
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/mealseaten"
-                    />
+                    android:src="@drawable/mealseaten" />
 
                 <TextView
+                    android:id="@+id/tvSummaryLunch"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:text="Lunch - Hashbrown = Calories - 204 | F - 15.9G | C - 2.8G | P - 11.7G"
+                    android:text="Lunch - None"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/calories" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:text="1100 Calories Left"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View
@@ -158,38 +118,17 @@
                 <ImageView
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/mealseaten"
-                    />
+                    android:src="@drawable/mealseaten" />
 
                 <TextView
+                    android:id="@+id/tvSummaryDinner"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:text="Dinner - Stake = Calories - 700 | F - 23.9G | C - 11.8G | P - 43.7G"
+                    android:text="Dinner - None"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="48dp"
-                    android:src="@drawable/calories" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:text="330 Calories Left"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <View
@@ -199,7 +138,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="#EEEEEE" />
 
-            <!-- Snack Row -->
+            <!-- Total Calories Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -207,19 +146,19 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="48dp"
+                    android:layout_width="40dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/mealseaten"
-                     />
+                    android:src="@drawable/calories" />
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:id="@+id/tvSummaryTotalCalories"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:text="Snack - Savory chips = Calories - 230 | F - 11.9G | C - 23.8G | P - 5.7G"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:layout_marginStart="24dp"
+                    android:text="2000 Calories Remaining"
+                    android:textColor="@color/calorie_progress"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>

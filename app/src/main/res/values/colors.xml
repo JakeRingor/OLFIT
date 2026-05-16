@@ -23,4 +23,8 @@
     <color name="card_bg">#FFFFFF</color>
     <color name="card_stroke">#F0F0F0</color>
     <color name="divider">#E0E0E0</color>
+
+    <color name="search_bg_color">#F2F2F2</color>
+    <color name="tab_bg_color">#EFEFEF</color>
+    <color name="barcode_orange">#FF8C33</color>
 </resources>

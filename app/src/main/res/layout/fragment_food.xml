@@ -29,6 +29,9 @@
             android:layout_width="62dp"
             android:layout_height="58dp"
             android:src="@drawable/olfit"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
             app:layout_constraintBottom_toBottomOf="@+id/tvFoodHeader"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tvFoodHeader"
@@ -43,15 +46,19 @@
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@id/tvFoodHeader">
 
-            <!-- Food Item 1 -->
+            <!-- Food Item 1: Adobo -->
             <LinearLayout
+                android:id="@+id/itemAdobo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/bg_food_card"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="60dp"
@@ -88,15 +95,19 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Food Item 2 -->
+            <!-- Food Item 2: Sisig -->
             <LinearLayout
+                android:id="@+id/itemSisig"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/bg_food_card"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="60dp"
@@ -133,15 +144,19 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Food Item 3 -->
+            <!-- Food Item 3: Pinakbet -->
             <LinearLayout
+                android:id="@+id/itemPinakbet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/bg_food_card"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="60dp"
@@ -178,15 +193,19 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Food Item 4 -->
+            <!-- Food Item 4: Tapsilog -->
             <LinearLayout
+                android:id="@+id/itemTapsilog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/bg_food_card"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="60dp"
@@ -223,15 +242,19 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Food Item 5 (Rice) -->
+            <!-- Food Item 5: Rice -->
             <LinearLayout
+                android:id="@+id/itemRice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/bg_food_card"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="60dp"

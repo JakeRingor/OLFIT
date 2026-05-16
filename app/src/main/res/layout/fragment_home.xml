@@ -21,8 +21,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tvTitle"
-            app:layout_constraintVertical_bias="0.393"
-            app:tint="@color/black" />
+            app:layout_constraintVertical_bias="0.393" />
 
         <TextView
             android:id="@+id/tvTitle"
@@ -36,7 +35,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Date Selector -->
-
         <LinearLayout
             android:id="@+id/dateSelector"
             android:layout_width="wrap_content"
@@ -49,6 +47,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
             <TextView
+                android:id="@+id/tvYesterday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="&lt; Yesterday  |  "
@@ -56,6 +55,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/tvToday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Today"
@@ -64,6 +64,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvTomorrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="  |  Tomorrow &gt;"
@@ -99,6 +100,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tvConsumedCalories"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1250"
@@ -107,6 +109,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tvCalorieGoal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="🔥/2000 kcal"
@@ -127,6 +130,7 @@
 
             <!-- Carbs Card -->
             <LinearLayout
+                android:id="@+id/cardCarbs"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -143,6 +147,7 @@
                     android:textStyle="bold" />
 
                 <ProgressBar
+                    android:id="@+id/pbCarbs"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="8dp"
@@ -151,6 +156,7 @@
                     android:progressTint="@color/carbs_progress" />
 
                 <TextView
+                    android:id="@+id/tvCarbsValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -162,6 +168,7 @@
 
             <!-- Fat Card -->
             <LinearLayout
+                android:id="@+id/cardFat"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -178,6 +185,7 @@
                     android:textStyle="bold" />
 
                 <ProgressBar
+                    android:id="@+id/pbFat"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="8dp"
@@ -186,6 +194,7 @@
                     android:progressTint="@color/fat_progress" />
 
                 <TextView
+                    android:id="@+id/tvFatValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -197,6 +206,7 @@
 
             <!-- Protein Card -->
             <LinearLayout
+                android:id="@+id/cardProtein"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -212,12 +222,16 @@
                     android:textStyle="bold" />
 
                 <ProgressBar
+                    android:id="@+id/pbProtein"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="8dp"
                     android:layout_marginTop="12dp"
                     android:progress="80"
-                    android:progressTint="@color/protein_progress" />                <TextView
+                    android:progressTint="@color/protein_progress" />
+
+                <TextView
+                    android:id="@+id/tvProteinValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -269,8 +283,10 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/ivBreakfast"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/breakfast" />
 
                 <LinearLayout
@@ -281,6 +297,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvBreakfastName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bread"
@@ -288,6 +305,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvBreakfastDetails"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1/2 Slice (1)"
@@ -325,8 +343,10 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/ivLunch"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/lunch" />
 
                 <LinearLayout
@@ -336,6 +356,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvLunchName1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Rice"
@@ -343,6 +364,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvLunchDetails1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="200g (1)"
@@ -351,6 +373,7 @@
                 </LinearLayout>
 
                 <View
+                    android:id="@+id/dividerLunch"
                     android:layout_width="1dp"
                     android:layout_height="24dp"
                     android:layout_marginStart="16dp"
@@ -358,11 +381,13 @@
                     android:background="@color/divider" />
 
                 <LinearLayout
+                    android:id="@+id/layoutLunch2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvLunchName2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Graham"
@@ -370,6 +395,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvLunchDetails2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1/2 cup (1)"
@@ -407,8 +433,10 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/ivDinner"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/dinner" />
 
                 <LinearLayout
@@ -419,6 +447,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvDinnerName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Chicken Roast"
@@ -426,6 +455,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvDinnerDetails"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="whole piece (1)"
@@ -449,6 +479,7 @@
             app:layout_constraintTop_toBottomOf="@id/cardDinner" />
 
         <LinearLayout
+            android:id="@+id/layoutTotalSummary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -469,8 +500,7 @@
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:src="@drawable/mealseaten"
-                    />
+                    android:src="@drawable/mealseaten" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -484,18 +514,16 @@
                         android:text="Meals eaten"
                         android:textColor="@color/black"
                         android:textSize="14sp"
-                        android:textStyle="bold"
-                        />
-
+                        android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvMealsEatenList"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="breakfast, Lunch, Dinner"
                         android:textColor="@color/black"
                         android:textSize="14sp"
-                        android:textStyle="bold"
-                        />
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -509,8 +537,7 @@
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:src="@drawable/calories"
-                    />
+                    android:src="@drawable/calories" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -524,9 +551,10 @@
                         android:text="Remaining Calories"
                         android:textColor="@color/black"
                         android:textSize="14sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tvRemainingCalories"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="750 kcal available today"
@@ -536,7 +564,5 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.core.widget.NestedScrollView>

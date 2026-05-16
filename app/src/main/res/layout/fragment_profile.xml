@@ -31,19 +31,37 @@
                 android:src="@drawable/olfit" />
         </androidx.cardview.widget.CardView>
 
-        <!-- Username -->
-        <TextView
-            android:id="@+id/tvUsername"
+        <!-- Username Section -->
+        <LinearLayout
+            android:id="@+id/llUsernameContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="USERNAME"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cvProfile" />
+            app:layout_constraintTop_toBottomOf="@id/cvProfile">
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USERNAME"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap to edit name"
+                android:textColor="@color/calorie_progress"
+                android:textSize="12sp" />
+        </LinearLayout>
 
         <!-- Stats Overview Section -->
         <TextView
@@ -56,7 +74,7 @@
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvUsername" />
+            app:layout_constraintTop_toBottomOf="@id/llUsernameContainer" />
 
         <LinearLayout
             android:id="@+id/llStats"
@@ -69,6 +87,7 @@
 
             <!-- Weight Card -->
             <LinearLayout
+                android:id="@+id/ll_weight_card"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="8dp"
@@ -77,7 +96,9 @@
                 android:elevation="2dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="53dp"
@@ -88,21 +109,30 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Current Weight"
+                    android:text="Weight"
                     android:textColor="#7A7A7A"
                     android:textSize="10sp" />
 
                 <TextView
+                    android:id="@+id/tvWeightValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="75 kg"
+                    android:text="-- kg"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to Edit"
+                    android:textColor="@color/calorie_progress"
+                    android:textSize="10sp" />
             </LinearLayout>
 
             <!-- Height Card -->
             <LinearLayout
+                android:id="@+id/ll_height_card"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -111,7 +141,9 @@
                 android:elevation="2dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="53dp"
@@ -122,21 +154,30 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Current Height"
+                    android:text="Height"
                     android:textColor="#7A7A7A"
                     android:textSize="10sp" />
 
                 <TextView
+                    android:id="@+id/tvHeightValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="175 cm"
+                    android:text="-- cm"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to Edit"
+                    android:textColor="@color/calorie_progress"
+                    android:textSize="10sp" />
             </LinearLayout>
 
-            <!-- Workouts Card -->
+            <!-- Food Done Card -->
             <LinearLayout
+                android:id="@+id/ll_food_done_card"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -144,7 +185,9 @@
                 android:elevation="2dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="53dp"
@@ -161,12 +204,20 @@
                     android:textSize="10sp" />
 
                 <TextView
+                    android:id="@+id/tvFoodDoneValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12"
+                    android:text="0"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculated"
+                    android:textColor="#7A7A7A"
+                    android:textSize="10sp" />
             </LinearLayout>
 
         </LinearLayout>
